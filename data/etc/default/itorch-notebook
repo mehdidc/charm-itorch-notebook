@@ -1,0 +1,9 @@
+# Set options
+DAEMON_ARGS="itorch --profile=PROFILE --ipython-dir=CONFIG_FOLDER --notebook-dir=HOMEPATH"
+
+# Start on boot
+START=1
+
+# Set Virtual Env
+VIRTUALENV=""
+

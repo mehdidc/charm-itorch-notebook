@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -ex
+HERE=$PWD
+. ${HERE}/hooks/common.sh
+exit 0
