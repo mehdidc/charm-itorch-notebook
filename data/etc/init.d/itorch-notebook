@@ -39,7 +39,7 @@ do_start()
 		source "$VIRTUALENV/bin/activate"
 		DAEMON="$VIRTUALENV/bin/$DAEMON"
     else 
-        DAEMON="/usr/bin/$DAEMON"
+        DAEMON="/usr/local/bin/$DAEMON"
 	fi
 	start-stop-daemon --start --quiet --exec $DAEMON --test > /dev/null \
 		|| return 1
@@ -60,7 +60,7 @@ do_stop()
 		source "$VIRTUALENV/bin/activate"
 		DAEMON="$VIRTUALENV/bin/$DAEMON"
     else 
-        DAEMON="/usr/bin/python"
+        DAEMON="/usr/local/bin/$DAEMON"
 	fi
 	start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --exec $DAEMON
 	RETVAL="$?"

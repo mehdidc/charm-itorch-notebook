@@ -4,8 +4,8 @@ set -ex
 HERE=$PWD
 . ${HERE}/hooks/common.sh
 
-#juju-log "installing torch"
-#curl -s https://raw.githubusercontent.com/mehdidc/torch-install/master/install-all | bash
+juju-log "installing torch"
+curl -s https://raw.githubusercontent.com/mehdidc/torch-install/master/install-all | bash
 
 juju-log "Installing itorch notebook"
 luarocks install itorch
@@ -40,7 +40,7 @@ fi
 PASSWORD=`python -c "import IPython;print IPython.lib.passwd(\"${NEW_PASSWORD}\")"`
 
 juju-log "Creating new configuration"
-[ -d ${CONFIG_FOLDER} ] && rm -rf ${CONFIG_FOLDER}
+#[ -d ${CONFIG_FOLDER} ] && rm -rf ${CONFIG_FOLDER}
 
 #sudo -u ${USER} ipython profile create ${PROFILE}
 cp -f ${HERE}/data/etc/${APPNAME}/${CONFIG_FILE}.template ${CONFIG_FOLDER}/${CONFIG_FILE}

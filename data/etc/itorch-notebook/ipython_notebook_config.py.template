@@ -13,7 +13,7 @@ c.NotebookApp.password = u'DEFAULT_PASSWORD'
 # Network and browser details. 
 # Change this to restrict the interface to call the server
 c.NotebookApp.ip = '*'
-c.NotebookApp.port = 443
+c.NotebookApp.port = 8080
 
 # We are on a server remember? No browser here...
 c.NotebookApp.open_browser = False
